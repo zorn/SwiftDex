@@ -13,9 +13,11 @@ class PokemonTests: XCTestCase {
         super.tearDown()
     }
 
-    func testDefaultPokemon() {
+    func testDefaultPokemonName() {
         let defaultPokemon = Pokemon()
-        XCTAssert(defaultPokemon.name == "Missingno.", "???")
+        let result = defaultPokemon.name
+        let expectation = "Missingno."
+        XCTAssert(expectation == result, "???")
     }
 
 //    func testPerformanceExample() {
